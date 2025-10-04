@@ -1,0 +1,19 @@
+sources:
+  - name: raw_schema
+    database: DBT_CLOUD
+    schema: RAW_SCHEMA
+    tables:
+      - name: orders
+
+models:
+    - name: orders
+      description: "Orders table"
+      columns:
+          - name: order_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+          
+                
